@@ -17,17 +17,13 @@ public class Grades {
 
     public int lastOne(int value) {
         return (this.grades[this.size]);
-
     }
+
     public double averageOfgrades() {
-        int suma = 0;
+        double suma = 0;
         for (int i = 0; i < this.size; i++); {
             suma+= grades [i];
-                }
-                int average = suma/(size+1);
-        return (averageOfgrades());
-
+        }
+        return suma/grades;
     }
-
-
-    }
+}

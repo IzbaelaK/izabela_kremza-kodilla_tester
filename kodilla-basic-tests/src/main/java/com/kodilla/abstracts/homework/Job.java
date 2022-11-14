@@ -9,7 +9,7 @@ public abstract class Job {
     this.responsibilities = responsibilities;
     }
 
-    public Job(String firstName, int age, Job job) {
+    public Job(String firstName, int age, String job) {
 
     }
 

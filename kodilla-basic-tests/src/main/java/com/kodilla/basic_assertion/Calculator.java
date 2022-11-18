@@ -14,5 +14,7 @@ public class Calculator {
     }
     public int square() {
         return 0;
+
     }
+
 }

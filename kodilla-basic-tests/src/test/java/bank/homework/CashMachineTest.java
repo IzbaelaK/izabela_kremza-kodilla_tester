@@ -1,4 +1,4 @@
-package com.kodilla.bank.homework;
+package bank.homework;
 
 import com.kodilla.bank.homework.CashMachine;
 import org.testng.annotations.Test;

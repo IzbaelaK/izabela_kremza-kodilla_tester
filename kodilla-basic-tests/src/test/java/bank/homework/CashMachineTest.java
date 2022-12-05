@@ -1,17 +1,16 @@
 package bank.homework;
 
 import com.kodilla.bank.homework.CashMachine;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
-import static com.kodilla.basic_assertion.ResultChecker.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashMachineTest {
 
     @Test
     public void powinnoBycZeroTransakcji() {
         CashMachine cashMachine = new CashMachine();
-        double[] values = cashMachine.getValues();
-        assertEquals(0, values.length);
+        assertEquals(0, cashMachine.iloscTransakcjiWbankomatach());
     }
 
     @Test
@@ -19,12 +18,28 @@ public class CashMachineTest {
         CashMachine cashmachine = new CashMachine();
         cashmachine.add(1000.00);
         cashmachine.add(1500.00);
+        assertEquals(2, cashmachine.iloscTransakcjiWbankomatach());
 
-
-        double[] values = cashmachine.getValues();
-        assertEquals(2, values.length);
-        assertEquals(1000.00, values[0]);
-        assertEquals(1500.00, values[1]);
+    }
+    @Test
+    public void wartoscBalance() {
+        CashMachine cashmachine = new CashMachine();
+        cashmachine.add(1000.00);
+        cashmachine.add(1500.00);
+        assertEquals(2500, cashmachine.Balance());
+    }
+    @Test
+    public void dodawanieTransakcjiDoValues() {
+        CashMachine cashmachine = new CashMachine();
+        cashmachine.add(1000.00);
+        cashmachine.add(1500.00);
+        assertEquals(2,cashmachine.iloscTransakcjiWbankomatach());
+    }
+    @Test
+    public void czyMozeBycTransakcjaZero() {
+        CashMachine cashmachine = new CashMachine();
+        cashmachine.add(0.00);
+        assertEquals(0,cashmachine.iloscTransakcjiWbankomatach());
     }
 }
 

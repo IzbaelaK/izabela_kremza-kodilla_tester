@@ -8,10 +8,6 @@ public class CashMachine {
 
     }
 
-    public double[] getValues() {
-        return values;
-    }
-
     public int iloscTransakcjiWbankomatach() {
         return values.length;
     }
@@ -20,7 +16,7 @@ public class CashMachine {
         if (value !=0) {
             double[] newTab = new double[this.values.length+1];
             System.arraycopy(values, 0, newTab, 0, values.length);
-            newTab[values.length - 1] = value;
+            newTab[newTab.length -1] = value;
             this.values = newTab;
         }
     }

@@ -31,4 +31,13 @@ public class BankTest {
         bank.add(2500.00);
         assertEquals(7000, finalBalance());
     }
+    @Test
+    public void ŚredniaWpłat() {
+        Bank bank = new Bank();
+        bank.add(1000.00);
+        bank.add(1500.00);
+        bank.add(2000.00);
+        bank.add(2500.00);
+        assertEquals(1750, averageDeposit(), 0.01);
+    }
 }

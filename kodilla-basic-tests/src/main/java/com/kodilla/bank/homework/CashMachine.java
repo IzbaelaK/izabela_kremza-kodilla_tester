@@ -37,7 +37,7 @@ public class CashMachine {
         return sum;
     }
 
-    public double sumDepositl(){
+    public double sumDeposit(){
         double sum = 0;
         for (int i = 0; i < values.length; i++) {
             if (values[i] > 0);
@@ -61,6 +61,7 @@ public class CashMachine {
         }
         return amount;
     }
+
 
 }
 

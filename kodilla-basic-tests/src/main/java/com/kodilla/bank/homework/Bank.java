@@ -47,36 +47,38 @@ public class Bank {
     public double averageDeposit() {
         double sum = 0;
         int amountOfDeposit = amountOfDeposit();
-        for (int i = 0; i < cashMachines.length; i++) {
-            sum = sum + this.cashMachines[i].sumDeposit();
-            if (amountOfDeposit != 0) {
-                return this.cashMachines[i].sumDeposit() / amountOfDeposit();
+        if (amountOfDeposit != 0)
+            for (int i = 0; i < cashMachines.length; i++) {
+                sum = sum + this.cashMachines[i].sumDeposit();
+                {
+                    return this.cashMachines[i].sumDeposit() / amountOfDeposit();
+                }
             }
-        }
         return sum;
     }
 
-    public double averageWithdrawal() {
-        double sum = 0;
-        int amountOfWithdrawal = amountOfWithdrawal();
-        for (int i = 0; i < cashMachines.length; i++) {
-            sum = sum + this.cashMachines[i].sumWithdrawal();
-            if (amountOfWithdrawal != 0) {
-                return this.cashMachines[i].sumWithdrawal() / amountOfWithdrawal();
-            }
-        }
+    public double averageWithdrawal () {
+       double sum = 0;
+       int amountOfWithdrawal = amountOfWithdrawal();
+       if (amountOfWithdrawal != 0)
+           for (int i = 0; i < cashMachines.length; i++) {
+               sum = sum + this.cashMachines[i].sumWithdrawal();
+               {
+                    return this.cashMachines[i].sumWithdrawal() / amountOfWithdrawal();
+                    }
+                }
         return sum;
-    }
-
-    public int amountOfCashMachineAtCashMachines() {
-        return cashMachines.length;
-    }
-
-    public int amountOfCashMachineAtAllCashMachines() {
-        int count = 0;
-        for (int i = 0; i < cashMachines.length; i++) {
-            count = count + this.cashMachines[i].iloscTransakcjiWbankomatach();
         }
-        return count;
-    }
+
+            public int amountOfCashMachineAtCashMachines () {
+                return cashMachines.length;
+            }
+
+            public int countOfTransactionAtAllCashMachines () {
+                int count = 0;
+                for (int i = 0; i < cashMachines.length; i++) {
+                    count = count + this.cashMachines[i].iloscTransakcjiWbankomatach();
+                }
+                return count;
+            }
 }

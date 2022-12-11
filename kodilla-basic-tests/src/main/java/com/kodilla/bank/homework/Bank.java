@@ -3,7 +3,7 @@ package com.kodilla.bank.homework;
 public class Bank {
     private CashMachine[] cashMachines;
 
-    public void CashMachine() {
+    public Bank() {
         this.cashMachines = new CashMachine[0];
     }
 
@@ -57,28 +57,29 @@ public class Bank {
         return sum;
     }
 
-    public double averageWithdrawal () {
-       double sum = 0;
-       int amountOfWithdrawal = amountOfWithdrawal();
-       if (amountOfWithdrawal != 0)
-           for (int i = 0; i < cashMachines.length; i++) {
-               sum = sum + this.cashMachines[i].sumWithdrawal();
-               {
-                    return this.cashMachines[i].sumWithdrawal() / amountOfWithdrawal();
-                    }
-                }
+    public double averageWithdrawal() {
+        double sum = 0;
+        int amountOfWithdrawal = amountOfWithdrawal();
+        if (amountOfWithdrawal != 0)
+
+        for (int i = 0; i < cashMachines.length; i++) {
+            sum = sum + this.cashMachines[i].sumWithdrawal();
+            {
+                return sum / amountOfWithdrawal();
+            }
+        }
         return sum;
+    }
+
+        public int amountOfCashMachineAtCashMachines () {
+            return cashMachines.length;
         }
 
-            public int amountOfCashMachineAtCashMachines () {
-                return cashMachines.length;
+        public int countOfTransactionAtAllCashMachines () {
+            int count = 0;
+            for (int i = 0; i < cashMachines.length; i++) {
+                count = count + this.cashMachines[i].iloscTransakcjiWbankomatach();
             }
-
-            public int countOfTransactionAtAllCashMachines () {
-                int count = 0;
-                for (int i = 0; i < cashMachines.length; i++) {
-                    count = count + this.cashMachines[i].iloscTransakcjiWbankomatach();
-                }
-                return count;
-            }
-}
+            return count;
+        }
+    }

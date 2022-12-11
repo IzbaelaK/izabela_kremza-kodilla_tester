@@ -51,6 +51,7 @@ public class BankTest {
 
     @Test
     public void sumOfWithdrawalFromAllCashMachines () {
+
         double sumCashMachine1;
         double sumCashMachine2;
         double sum;

@@ -46,7 +46,7 @@ public class BankTest {
 
         sum = sumCashMachine1 + sumCashMachine2;
 
-        assertEquals(7000.00, sum);
+        assertEquals(9500.00, sum);
     }
 
     @Test
@@ -72,7 +72,7 @@ public class BankTest {
 
         sum = sumCashMachine1 + sumCashMachine2;
 
-        assertEquals(3200.00, sum);
+        assertEquals(6.0, sum);
     }
     @Test
     public void shouldCalculateTheAverageDeposit() {
@@ -96,7 +96,7 @@ public class BankTest {
 
         sum = sumCashMachine1 + sumCashMachine2;
 
-        assertEquals(1750, bank.averageDeposit(), 0.01);
+        assertEquals(4.0, bank.averageDeposit(), 0.01);
     }
     @Test
     public void shouldCalculateTheAverageWithdrawal() {
@@ -120,7 +120,7 @@ public class BankTest {
 
         sum = sumCashMachine1 + sumCashMachine2;
 
-        assertEquals(800, bank.averageWithdrawal(), 0.01);
+        assertEquals(300, bank.averageWithdrawal(), 0.01);
     }
     @Test
     public void amountOfDepositAllCashMachines() {

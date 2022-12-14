@@ -48,28 +48,29 @@ public class Bank {
         double sum = 0;
         int amountOfDeposit = amountOfDeposit();
         if (amountOfDeposit != 0)
+
             for (int i = 0; i < cashMachines.length; i++) {
-                sum = sum + this.cashMachines[i].sumDeposit();
+                sum += this.cashMachines[i].amountOfDeposit();
                 {
-                    return this.cashMachines[i].sumDeposit() / amountOfDeposit();
+                    return sum / amountOfDeposit();
                 }
             }
         return sum;
     }
 
-    public double averageWithdrawal() {
-        double sum = 0;
-        int amountOfWithdrawal = amountOfWithdrawal();
-        if (amountOfWithdrawal != 0)
+        public double averageWithdrawal () {
+            double sum = 0;
+            int amountOfWithdrawal = amountOfWithdrawal();
+            if (amountOfWithdrawal != 0)
 
-        for (int i = 0; i < cashMachines.length; i++) {
-            sum = sum + this.cashMachines[i].sumWithdrawal();
-            {
-                return sum / amountOfWithdrawal();
-            }
+                for (int i = 0; i < cashMachines.length; i++) {
+                    sum += this.cashMachines[i].sumWithdrawal();
+                    {
+                        return sum / amountOfWithdrawal();
+                    }
+                }
+            return sum;
         }
-        return sum;
-    }
 
         public int amountOfCashMachineAtCashMachines () {
             return cashMachines.length;
@@ -83,3 +84,4 @@ public class Bank {
             return count;
         }
     }
+

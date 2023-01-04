@@ -4,7 +4,6 @@ public class Student {
     public String name;
     Teacher teacher;
 
-    Teacher teachers = new Teacher ("Elwira Moskal");
 
     public Student(String name, Teacher teacher) {
         this.name = name;
@@ -24,7 +23,6 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", teacher=" + teacher +
-                ", teachers=" + teachers +
                 '}';
     }
 }

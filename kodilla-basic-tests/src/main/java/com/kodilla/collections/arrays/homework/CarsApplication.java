@@ -7,6 +7,7 @@ import com.kodilla.collections.interfaces.com.kodilla.collections.interfaces.hom
 
 import java.util.Random;
 
+
 public class CarsApplication {
     private static final Random random = new Random();
     int drawCar = random.nextInt(3);
@@ -15,14 +16,14 @@ public class CarsApplication {
         Car[] cars = new Car[3];
         for (int n = 0; n < cars.length; n++)
             cars[n] = drawCar();
-        for ( Car car : cars)
+        for (Car car : cars)
             CarUtils.describeCar(car);
     }
+
     public static Car drawCar() {
         Random random = new Random();
         int drawCar = random.nextInt(3);
-        double a = random.nextDouble() * 100 + 1;
-
+        double a = getRandomSpeed(random) * 100 + 1;
 
         if (drawCar == 0)
             return new Ford(a);
@@ -34,7 +35,10 @@ public class CarsApplication {
             return new BMW(a);
         }
     }
+
     private static double getRandomSpeed(Random random) {
         return random.nextDouble() * 100 + 1;
     }
-    }
+
+}
+

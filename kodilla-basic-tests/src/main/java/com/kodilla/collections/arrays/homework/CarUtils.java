@@ -5,7 +5,6 @@ import com.kodilla.collections.interfaces.com.kodilla.collections.interfaces.hom
 import com.kodilla.collections.interfaces.com.kodilla.collections.interfaces.homework.Ford;
 import com.kodilla.collections.interfaces.com.kodilla.collections.interfaces.homework.Opel;
 
-import java.util.Random;
 
 public class CarUtils {
 
@@ -27,6 +26,7 @@ public class CarUtils {
     }
 
     public static void increaseSpeed(Car car) {
+
     }
 }
 

@@ -9,6 +9,7 @@ public class CashMachine {
     }
 
     public int iloscTransakcjiWbankomatach() {
+
         return values.length;
     }
 

@@ -2,8 +2,6 @@ package com.kodilla.execution_model.homework;
 
 import org.junit.jupiter.api.*;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.util.List;
 
